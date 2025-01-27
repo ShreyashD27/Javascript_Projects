@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #dfa4a4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.input-section {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8fafc;
+}
+
+.preview-section {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8faff;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #1a202c;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #5a67d8;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  background-color: #5a67d8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #434190;
+}
+
+.dynamic-inputs {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  border: 1px solid #cbd5e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f7fafc;
+}
+
+.remove-btn {
+  background-color: #e53e3e;
+}
+
+.remove-btn:hover {
+  background-color: #c53030;
+}
+
+/* Preview Styles */
+.preview-content {
+  line-height: 1.8;
+  font-size: 15px;
+  color: #4a5568;
+}
+
+.preview-section h2 {
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.preview-section h3 {
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+
+.preview-section p {
+  margin-bottom: 5px;
+}
+
+.print-btn {
+  background-color: #38a169;
+  margin-top: 20px;
+}
+
+.print-btn:hover {
+  background-color: #2f855a;
+}
+
+@media print {
+  .input-section {
+    display: none;
+  }
+  .preview-section {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

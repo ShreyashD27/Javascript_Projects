@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number SMS Verification in Firebase</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Phone Number Verification with Firebase SMS</h1>
+
+            <div class="number-input">
+                <input type="text" id="number" placeholder="+639948621564">
+                <div id="recaptcha-container"></div>
+                <button id="send" onclick="sendOTP()">Verify Number</button>
+            </div>
+
+            <div class="verification" style="display: none;">
+                <input type="text" id="verificationCode" placeholder="OTP Code">
+                <button id="verify" onclick="verifyCode()">Send OTP</button>
+                <a href="#" onclick="location.reload()">Didn't receive a code? Try Again!</a>
+            </div>
+
+            <div class="result" style="display: none;">
+                <div class="correct" style="display: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4315/4315445.png" alt="">
+                    <h3>Phone Number Verified!</h3>
+                    <button onclick="location.reload()">Confirm</button>
+                </div>
+
+                <div class="incorrect" style="display: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/14025/14025477.png" alt="">
+                    <h3>Phone Number Verified!</h3>
+                    <button onclick="location.reload()">Try Again!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
